@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Carousel section */
+.carousel-item img{
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+/* popup section */
+
+.popup-overlay {
+    /*Hides pop-up when there is no "active" class*/
+    visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 3px solid #666666;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+  }
+  
+  .popup-overlay.active {
+    /*displays pop-up when "active" class is present*/
+    visibility: visible;
+    text-align: center;
+  }
+  
+  .popup-content {
+    /*Hides pop-up content when there is no "active" class */
+    visibility: hidden;
+  }
+  
+  .popup-content.active {
+    /*Shows pop-up content when "active" class is present */
+    visibility: visible;
+  }
+
+/* meals section */
+.meals{
+    padding: 2% 0%;
+}
+.meals hr{
+    border-color: darkgoldenrod;
+    width: 40px;
+}
+h5 b{
+    color: darkgoldenrod;
+    font-weight: 400;
+}
+.meals .meal-types-heads{
+    padding: 2% 0%;
+    color: darkkhaki;
+}
+.meals #breakfast1{
+    border: 2px solid rgba(196, 83, 8, 0.479);
+    
+}
+
+#breakfast1 img{
+    padding: 2% 0%;
+    /* margin: 1% 0%; */
+}
+.bg{
+    background-color: rgba(196, 83, 8, 0.479);
+}
+.about-breakfast b{
+    color: #fff;
+    font-weight: 600;
+    -webkit-transform: rotate(-40deg); 
+        -moz-transform: rotate(-40deg);
+    transform: rotate(-40deg) ;
+}
+.about-breakfast a{
+    text-decoration: none;
+    margin: 2% 0%;
+}
+
+
+/* Mosty dined section */
+.mostly-dined{
+    padding: 2% 0%;
+}
+.mostly-dined h5{
+    font-weight: 600;
+}
+.mostly-dined hr{
+    color: darkcyan;
+    border-color: darkcyan;
+    width: 40px;
+
+}
+
+
+/* Reserve info section */
+/* .reserve-info{
+    background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: auto;
+} */
+.reserve-info{
+    padding: 2% 0%;
+    color: #fff;
+
+}
+.reserve-info .bg{
+    border: 2px solid #000;
+    background-image: url("images/date.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.reserve-info h5{
+    font-weight: 600;
+    color: #fff;
+}
+.reserve-info p{
+    color: #fff;
+}
+.reserve-info h5:hover > .reserve-info hr{
+    /* color: crimson; */
+    width: 60px;
+    transition: 0.6s ease;
+    border: none;
+    color: crimson;
+    background-color: crimson;
+}
+.reserve-info hr{
+    border: none;
+    width: 40px;
+    height: 10px;
+    color: crimson;
+    background-color: crimson;
+}
+.reserve-info img{
+    width: auto;
+    height: 250px;
+}
+
+
+/* team section */
+.team{
+    padding: 2% 0%;
+}
+.team img{
+    height: 150px;
+    width: 150px;
+}
+.team hr{
+    width: 40px;
+    color: darkcyan;
+}
+
+/* newsletter section */
+.newsletter{
+    padding: 2% 0%;
+
+}
+.newsletter h5{
+    font-weight: 400;
+    font-size: 30px;
+}
+.form-pad{
+    padding: 2% 0%;
+}
+.newsletter input{
+    margin: 0px 5px
+}
+/* Footer section */
+
+.footer{
+    background: sienna;
+}
+
+.footer ul{
+    list-style-type: none;
+    margin: 2% 0%;
+}
+.footer ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    color: snow;
+    margin: 5px 0px;
+}
+.footer ul li a:hover{
+    color: #000;
+}
+.footer-newsletter .form-control {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    color: #fff;
+  }
+  .footer-newsletter .form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.2);
+    font-style: italic;
+  }
+  .footer-newsletter .form-control:active, .footer-newsletter .form-control:focus {
+    border-bottom: 1px solid white;
+  }
+  
+  .footer-newsletter button[type="submit"] {
+    background: none;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  /* Reservation style */
+
+  .heading-section{
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/reserved.jpg');
+      background-position: center;
+      background-size: cover;
+      height: 400px;
+  }
+  .heading-section h2{
+      color: #fff;
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  .reserve{
+      padding: 2% 0%;
+  }
+  .reserve h5{
+      font-weight: 600;
+      color: #000;
+  }
+  .reserve hr{
+      width: 40px;
+      color:cornflowerblue;
+  }
+  .take-me{
+      padding: 2% 0%;
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/restaurant-food.jpg");
+      background-position:center;
+      background-size: cover;
+  }
+  .take-me p{
+      padding: 2% 0%;
+      color: #fff;
+      font-weight: 600;
+      font-size: 20px;
+  }
+  .take-me a{
+      transition: 0.6s ease-in;
+      animation: blink 2s;
+      animation-iteration-count: infinite;
+      box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 0.53);
+  }
+  @keyframes blink{
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        50% {
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+        100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        }
+  }
