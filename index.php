@@ -1,5 +1,7 @@
 <?php
+session_start();
 include('navbar.php');
+include('actions/authenticate.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +65,7 @@ include('navbar.php');
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Become a member. Get exclusive offers</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
@@ -74,20 +76,21 @@ include('navbar.php');
                                     <a class="nav-link active" id="register-tab" data-toggle="tab" aria-controls="register" aria-selected="true" href="#register">Register</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="login-tab" data-toggle="tab" aria-controls="login" aria-selected="true" href="#login">Login</a>
+                                    <a class="nav-link" id="login-tab" data-toggle="tab" aria-controls="login" aria-selected="true" href="#login">Login</a>
                                 </li>
                             </ul>
 
                             <div class="tab-content" id="tab-content">
                                 <div class="tab-pane fade show active" id="register" role="tabpane1" aria-labelledby="register-tab">
                                     <form action="#" method="post">
+                                    <?php include('actions/errors.php') ?>
                                         <div class="form-group">
                                             <label for="">Your Name</label>
-                                            <input type="text" class="form-control" placeholder="Your name">
+                                            <input type="text" name="username" class="form-control" placeholder="Your name" value="<?php echo $username; ?>">
                                         </div>
                                         <div class="form-group">
                                             <label for="">Your Email</label>
-                                            <input type="email" name="email" class="form-control" placeholder="Your email">
+                                            <input type="email" name="email" class="form-control" placeholder="Your email" value="<?php echo $email; ?>">
                                         </div>
                                         <div class="form-group">
                                             <label for="">Password</label>

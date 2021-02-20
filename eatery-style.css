@@ -3,6 +3,17 @@
     padding: 0;
 }
 
+/* Modal section */
+.error {
+    width: 92%; 
+    margin: 0px auto; 
+    padding: 10px; 
+    border: 1px solid #a94442; 
+    color: #a94442; 
+    background: #f2dede; 
+    border-radius: 5px; 
+    text-align: left;
+  }
 /* Carousel section */
 .carousel-item img{
     height: 100vh;

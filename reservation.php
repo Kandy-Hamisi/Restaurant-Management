@@ -51,12 +51,9 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="name">First Name</label>
-                                        <input type="text" class="form-control" name="fname" placeholder="Enter your name">
+                                        <input type="text" class="form-control" name="name" placeholder="Enter your name">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="name">Last Name</label>
-                                        <input type="text" class="form-control" name="lname" placeholder="Enter your name">
-                                    </div>
+                                    
                                     <div class="form-group">
                                         <label for="phone">Phone</label>
                                         <input type="phone" class="form-control" name="phone" placeholder="Your phone number">
@@ -70,6 +67,13 @@
                     </div>
                     <div class="col-md-6 col">
                         <div class="card">
+                        <?php $mysqli = mysqli_connect('localhost', 'said', '#Password2021', 'Eatery');
+                            $query = "SELECT * FROM alltables";
+                            $result = mysqli_query($mysqli, $query);
+
+
+                        ?>
+                        
                             <div class="card-header bg-info">
                                 <h1>Reservation Information</h1>                        
                             </div>
@@ -80,23 +84,28 @@
 
                                             <option value="">Please select Table</option>
                                         <?php
-                                            $row = mysqli_num_rows($result);                                                                       
+                                            // $row = mysqli_num_rows($result);                                                                       
                                         ?>
-                                        <?php if($row == 0):?>
+                                        <?php //if($row == 0):?>
                                             <br>No records found</br>
-                                        <?php endif;?>
+                                        <?php //endif;?>
                                         
                                         </select>
                                 </div>
                                 <div class="form-group">
                                         <label for="">Purpose</label>
+                                        <?php //while ($row = $result->fetch_assoc()):  ?>
+                                           
                                         <select class="form-control" name="purpose" id="">
                                             <option value="" selected>Select</option>
-                                            <option value="meeting">Meeting</option>
-                                            <option value="celebration">Celebration</option>
+                                            <?php while ($row = mysqli_fetch_array($result)):?>
+                                            <option value="<?php echo $row[0]; ?>"><?php echo $row[2]; ?></option>
+                                            <!-- <option value="celebration">Celebration</option>
                                             <option value="birthday">Birthday</option>
-                                            <option value="casual">Casual</option>                              
+                                            <option value="casual">Casual</option> -->
+                                            <?php endwhile; ?>
                                         </select>
+                                    
                                 </div>
                                 <div class="form-group">
                                         <label for="">Meal Deal</label>
